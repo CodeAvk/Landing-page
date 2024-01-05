@@ -1,0 +1,93 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.cover-image {
+  height: 100vh; /* Full viewport height */
+  width: 50vw; /* 50% of viewport width */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+.ml-2,
+.mx-2 {
+  margin-left: -12.5rem !important;
+}
+.nml-2,
+.nmx-2 {
+  margin-left: -15.5rem !important;
+}
+.gml-2,
+.gmx-2 {
+  margin-left: -11.5rem !important;
+  font-weight: bold;
+}
+.cml-2,
+.cmx-2 {
+  margin-left: -14.5rem !important;
+}
+.card {
+  width: 22rem;
+  padding: 2em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #222d35;
+}
+.custom-btn {
+  padding: 4px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #37a576;
+  color: white;
+  cursor: pointer;
+  width: calc(100% - -22.1px);
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-left: -23px;
+}
+body {
+  overflow: hidden;
+}
+
+/* Hover effect */
+.custom-btn:hover {
+  background-color: #37a576; /* Change color on hover */
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+.white-text {
+  color: white;
+}
+.align-top {
+  height: calc(
+    1.5em + 0.75rem + 2px
+  ); /* Match the height of the adjacent checkbox input */
+  line-height: 1.5; /* Adjust line height for proper alignment */
+}
+.custom-btn-style {
+  height: auto; /* Reducing button height */
+  padding-left: 2rem; /* Adjusting left padding */
+  padding-right: 2rem; /* Adjusting right padding */
+}
+
+.bg-image {
+  background-image: url("your-image-url.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .overflow-hidden {
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* Additional CSS styles can go here */
+    .cover-image {
+      width: 50vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .right-layout {
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="vh-100 d-flex align-items-center justify-content-center" style="background-color: #111A22;">
+    <div class="container-fluid h-custom row m-0">
+      <div class="col-md-6 d-flex p-0" style="margin-top: -40px;">
+        <!-- Left layout with image -->
+        <img src="./UI.png" class="cover-image" alt="Sample image">
+      </div>
+      <div class="col-md-6 p-0 d-flex align-items-center justify-content-center">
+        <!-- Right layout with card -->
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-md-8 ">
+            <div class="card rounded-3">
+              <div class="card-body">
+                <form>
+                  <label class="col-form-label white-text gml-2" for="form3Example3">Reset your Password!</label>
+                  <!-- Email input -->
+                  <div class="form-outline mb-2">
+                    <label class="col-form-label white-text ml-2" for="form3Example3">Email address</label>
+                    <input type="email" id="form3Example3" class="form-control form-control-sm"
+                      placeholder="Enter your email address" />
+                  </div>
+                  <!-- Password input -->
+                  <div class="form-outline mb-2">
+                    <label class="col-form-label white-text cml-2" for="form3Example3">Password</label>
+                    <input type="password" id="form3Example4" class="form-control form-control-sm"
+                      placeholder="Enter your password" />
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <!-- Checkbox -->
+                    <div class="form-check mb-0">
+                      <!-- <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" /> -->
+                      <label class="form-check-label white-text " for="form2Example3"> </label>
+
+                      <button class="custom-btn">Reset Password</button>
+
+
+
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
