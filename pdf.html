@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Analysis Report</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Additional custom styles */
+    body {}
+
+    .company-name {
+      font-weight: bold;
+    }
+
+    .report-heading {
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .bold-date span,
+    .bold-experiment span {
+      font-weight: bold;
+    }
+
+    .divider {
+      border-top: 1px solid #ccc;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Adjusted column width for images */
+    .bioink-image,
+    .predicted-anomaly-image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      background-color: red;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+
+      .company-name,
+      .pan-details {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="py-3 position-relative">
+      <div class="header-content">
+        <h1 class="company-name">Next Big Innovation Labs® Pvt. Ltd. </h1>
+        <div class="logo-container">
+          <img src="./logo NBIL.png" alt="Company Logo" style="width: auto; height: 80px;">
+        </div>
+      </div>
+      <p class="pan-details">PAN: AAFCN2192L | GST – 29AAFCN2192L1Z0 | Contact - +91 9008200105/ +91 8971909120</p>
+      <div class="divider"></div>
+    </header>
+
+    <!-- Quality Analysis Report -->
+    <section class="mb-5">
+      <h2 class="report-heading">Quality Analysis Report</h2>
+      <p class="bold-date">Issued on: <span>08/01/2024</span></p>
+      <p class="bold-experiment">Experiment ID: <span>QAR01</span></p>
+
+      <!-- Table -->
+      <table id="qarTable" class="table table-bordered" style="position: relative; z-index: 1;">
+        <!-- ... (your table structure) ... -->
+        <thead>
+          <tr>
+            <th scope="col">Sl no.</th>
+            <th scope="col">Bioink</th>
+            <th scope="col">Concentration</th>
+            <th scope="col" class="bioink-image">Bioprinted Scaffold</th>
+            <th scope="col" class="predicted-anomaly-image">Predicted Anomaly</th>
+            <th scope="col">Probability Score / Accuracy</th>
+            <th scope="col">Observation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JavaScript will generate rows here -->
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-dark" id="printBtn" onclick="window.print()">Print</button>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+
+
+
+    // Add event listener to the button
+    document.getElementById('printBtn').addEventListener('click', function () {
+      // Call the function to generate the PDF
+      generatePDF();
+    });
+    // JavaScript to dynamically generate 10 rows in the table
+    document.addEventListener("DOMContentLoaded", function () {
+      var tableBody = document.querySelector("#qarTable tbody");
+      var numRows = 10; // Number of rows to generate
+
+      for (var i = 1; i <= numRows; i++) {
+        var newRow = document.createElement("tr");
+        newRow.innerHTML = `
+          <th scope="row">${i}</th>
+          <td>Bioink ${i}</td>
+          <td>${Math.floor(Math.random() * 10) + 1}%</td>
+          <td><img src="https://via.placeholder.com/100" alt="Bioprinted Scaffold" width="100" height="100"></td>
+          <td><img src="https://via.placeholder.com/100" alt="Predicted Anomaly" width="100" height="100"></td>
+          <td>${Math.floor(Math.random() * 100)}%</td>
+          <td>No anomalies observed</td>
+        `;
+        tableBody.appendChild(newRow);
+      }
+    });
+  </script>
+</body>
+
+</html>
