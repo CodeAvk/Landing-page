@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>User Profile</h1>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <div class="d-flex align-items-center">
+          <img src="user-avatar.jpg" alt="User Avatar" class="rounded-circle" style="width: 50px; height: 50px;">
+          <div class="ml-3">
+            <h5>User Email</h5>
+            <p>User Mobile Number</p>
+          </div>
+          <div class="ml-auto">
+            <button class="btn btn-primary">Update Photo</button>
+            <button class="btn btn-secondary">Edit Profile</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="question1">Question 1:</label>
+            <input type="text" class="form-control" id="question1" placeholder="Answer 1">
+          </div>
+          <div class="form-group">
+            <label for="question2">Question 2:</label>
+            <input type="text" class="form-control" id="question2" placeholder="Answer 2">
+          </div>
+          <div class="form-group">
+            <label for="question3">Question 3:</label>
+            <input type="text" class="form-control" id="question3" placeholder="Answer 3">
+          </div>
+          <div class="form-group">
+            <label for="question4">Question 4:</label>
+            <input type="text" class="form-control" id="question4" placeholder="Answer 4">
+          </div>
+          <div class="form-group">
+            <label for="question5">Question 5:</label>
+            <input type="text" class="form-control" id="question5" placeholder="Answer 5">
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-secondary mr-2">Cancel</button>
+            <button type="button" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
